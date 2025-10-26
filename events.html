@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Events & Programs — Good Governance Advocacy International</title>
+  <meta name="description" content="Events & Programs from Good Governance Advocacy International (GGAI)." />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    :root {
+      --primary: #0D1B2A;
+      --accent: #F15A29;
+      --light: #F9FAFB;
+    }
+    html { font-family: "Poppins", system-ui, sans-serif; }
+    .fade-up { opacity: 0; transform: translateY(18px); transition: all .6s cubic-bezier(.2,.9,.2,1); }
+    .fade-up.show { opacity: 1; transform: none; }
+    .circle-icon { height: 84px; width: 84px; border-radius: 999px; border: 1px solid rgba(15,23,42,0.06); display: flex; align-items: center; justify-content: center; }
+    .card-shadow { box-shadow: 0 10px 26px rgba(13,27,42,0.06); }
+  </style>
+</head>
+<body class="antialiased text-[color:var(--primary)] bg-[color:var(--light)]">
+
+  <!-- HEADER with social icons -->
+  <header class="bg-white/90 backdrop-blur-sm sticky top-0 z-50 border-b">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3">
+        <img src="assets/ggai-logo.png" alt="GGAI" class="w-10 h-10">
+        <div class="hidden sm:block">
+          <div class="text-sm font-semibold">GOOD GOVERNANCE</div>
+          <div class="text-xs text-slate-500">ADVOCACY INT'L</div>
+        </div>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
+        <a href="index.html" class="hover:text-[color:var(--accent)]">Home</a>
+        <a href="about.html" class="hover:text-[color:var(--accent)]">About Us</a>
+        <a href="events.html" class="border-b-2 border-[color:var(--accent)] text-[color:var(--primary)] pb-1 font-semibold">Events & Programs</a>
+        <a href="news.html" class="hover:text-[color:var(--accent)]">News & Updates</a>
+        <a href="contact.html" class="hover:text-[color:var(--accent)]">Contact</a>
+
+        <div class="flex items-center gap-4 ml-4 text-slate-600">
+          <a href="https://instagram.com/ggadvocacyintl" target="_blank" class="hover:text-[#F15A29]" aria-label="Instagram"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+          <a href="https://twitter.com/ggadvocacyintl" target="_blank" class="hover:text-[#F15A29]" aria-label="Twitter"><i data-lucide="twitter" class="w-5 h-5"></i></a>
+          <a href="https://youtube.com/@ggaintl" target="_blank" class="hover:text-[#F15A29]" aria-label="YouTube"><i data-lucide="youtube" class="w-5 h-5"></i></a>
+        </div>
+      </nav>
+
+      <div class="md:hidden flex items-center gap-3">
+        <a href="https://instagram.com/ggadvocacyintl" target="_blank" class="hover:text-[#F15A29]"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+        <a href="https://twitter.com/ggadvocacyintl" target="_blank" class="hover:text-[#F15A29]"><i data-lucide="twitter" class="w-5 h-5"></i></a>
+        <a href="https://youtube.com/@ggaintl" target="_blank" class="hover:text-[#F15A29]"><i data-lucide="youtube" class="w-5 h-5"></i></a>
+        <button id="mobileBtn" aria-label="menu" class="text-xl">☰</button>
+      </div>
+    </div>
+
+    <div id="mobileNav" class="md:hidden hidden bg-white border-t">
+      <div class="px-6 py-4 flex flex-col gap-3">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="events.html">Events & Programs</a>
+        <a href="news.html">News & Updates</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="relative">
+    <div class="bg-[url('assets/7.jpeg')] bg-cover bg-center">
+      <div class="bg-blue-900/60">
+        <div class="max-w-6xl mx-auto px-6 py-24 md:py-32 text-center text-white">
+          <h1 class="text-4xl md:text-5xl font-extrabold fade-up">Events & Programs</h1>
+          <p class="mt-3 text-sm text-white/80 fade-up">Home — Events & Programs</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAIN -->
+  <main class="max-w-6xl mx-auto px-6 py-12">
+
+    <!-- Events grid -->
+    <section id="eventsGrid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10">
+      <!-- dynamically injected -->
+    </section>
+
+    <!-- Subscribe CTA -->
+    <section class="mt-16 py-12 bg-white rounded-lg card-shadow text-center fade-up">
+      <h3 class="text-2xl font-semibold">Never Miss an Event</h3>
+      <p class="mt-3 text-slate-600">Subscribe to get updates on upcoming lectures, trainings, and programs from GGAI.</p>
+
+      <div class="mt-6 flex flex-col sm:flex-row items-center justify-center gap-3">
+        <input id="subscribeEmail" type="email" placeholder="Your email address" class="border px-4 py-3 rounded-md w-full sm:max-w-md" />
+        <button id="subscribeBtn" class="bg-[color:var(--accent)] text-white px-6 py-3 rounded-md">Subscribe</button>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-[color:var(--primary)] text-white mt-12">
+    <div class="max-w-6xl mx-auto px-6 py-12 grid md:grid-cols-3 gap-6">
+      <div>
+        <div class="flex items-center gap-3">
+          <img src="assets/ggai-logo.png" alt="GGAI" class="w-10 h-10">
+          <div>
+            <div class="font-semibold">GOOD GOVERNANCE ADVOCACY INT'L</div>
+            <div class="text-sm text-slate-200/80">Promoting good governance & progress</div>
+          </div>
+        </div>
+        <p class="mt-4 text-sm text-slate-200/70">Boulevard road 2, Parliamentary Extension, Calabar, Nigeria<br>Email: ggadvocacyintl@gmail.com</p>
+      </div>
+
+      <div>
+        <h6 class="font-semibold">Quick Links</h6>
+        <ul class="mt-3 space-y-2 text-sm text-slate-200/70">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="news.html">News & Updates</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h6 class="font-semibold">Follow Us</h6>
+        <div class="mt-3 flex gap-3">
+          <a href="https://instagram.com/ggadvocacyintl" target="_blank" class="bg-white/10 p-2 rounded-full"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+          <a href="https://twitter.com/ggadvocacyintl" target="_blank" class="bg-white/10 p-2 rounded-full"><i data-lucide="twitter" class="w-5 h-5"></i></a>
+          <a href="https://youtube.com/@ggaintl" target="_blank" class="bg-white/10 p-2 rounded-full"><i data-lucide="youtube" class="w-5 h-5"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="border-t border-white/10 text-center py-4 text-xs text-slate-200/60">
+      © <span id="year"></span> GGAI. All rights reserved.
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    lucide.createIcons();
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // sample events
+    const events = [
+      { title: "Public Lecture: Strengthening Governance & Accountability", date: "Wed, Nov 5 • GMT+1", image: "assets/ggai-publec-flyer.jpg" },
+      { title: "Community Development Workshop", date: "Coming Soon", image: "assets/nuj2.jpg" },
+      { title: "Media & Policy Engagement", date: "Coming Soon", image: "assets/20.jpeg" },
+    ];
+
+    const grid = document.getElementById("eventsGrid");
+    grid.innerHTML = events.map(ev => `
+      <article class="bg-white rounded-lg overflow-hidden card-shadow fade-up hover:scale-[1.02] transition">
+        <img src="${ev.image}" alt="${ev.title}" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h4 class="font-semibold">${ev.title}</h4>
+          <p class="mt-2 text-sm text-slate-500">${ev.date}</p>
+          <a href="#" class="inline-block mt-4 text-[color:var(--accent)] text-sm font-medium hover:underline">Read More →</a>
+        </div>
+      </article>
+    `).join("");
+
+    // fade animation
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll(".fade-up").forEach(el => io.observe(el));
+
+    // subscribe
+    document.getElementById("subscribeBtn").addEventListener("click", () => {
+      const email = document.getElementById("subscribeEmail").value.trim();
+      if (!email) return alert("Please enter an email address.");
+      alert(`Thanks! You're subscribed as ${email}`);
+    });
+
+    // mobile nav toggle
+    document.getElementById("mobileBtn").addEventListener("click", () => {
+      document.getElementById("mobileNav").classList.toggle("hidden");
+    });
+  </script>
+</body>
+</html>

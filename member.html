@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Become a Member – Good Governance Advocacy Int’l</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-white text-gray-900">
+
+  <!-- BACK BUTTON HEADER -->
+  <header class="flex items-center justify-between px-6 py-4 border-b">
+    <button onclick="goBack()" class="flex items-center space-x-2 text-gray-700 hover:text-orange-600 transition">
+      <i data-lucide="arrow-left" class="w-5 h-5"></i>
+      <span class="font-medium text-sm">Back</span>
+    </button>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="text-center py-12 px-4">
+    <h2 class="text-3xl md:text-4xl font-extrabold mb-3">Choose Your Membership Plan</h2>
+    <p class="text-gray-600">Select the plan that best fits you and start your journey with GGAI today.</p>
+  </section>
+
+  <!-- MEMBERSHIP PLANS -->
+  <section class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8 px-6 pb-16">
+
+    <!-- Basic Package -->
+    <div class="border rounded-2xl p-6 text-center hover:shadow-xl transition">
+      <h3 class="text-2xl font-bold text-gray-800 mb-2">₦20,000 <span class="text-sm text-gray-500">/year</span></h3>
+      <p class="font-semibold text-lg mb-2">Basic Package</p>
+      <p class="text-gray-500 mb-4 text-sm">For individuals who want to stay updated and connected.</p>
+      <ul class="text-left text-sm text-gray-700 space-y-2 mb-6">
+        <li class="flex items-center"><i data-lucide="check-circle" class="w-4 h-4 text-orange-600 mr-2"></i>Access to newsletters & updates</li>
+        <li class="flex items-center"><i data-lucide="check-circle" class="w-4 h-4 text-orange-600 mr-2"></i>Invitations to public events & webinars</li>
+        <li class="flex items-center"><i data-lucide="check-circle" class="w-4 h-4 text-orange-600 mr-2"></i>Recognition as a GGAI supporter</li>
+      </ul>
+      <button onclick="openModal('Basic')" class="bg-orange-600 text-white px-6 py-2 rounded-full hover:bg-orange-700 transition">Get Basic</button>
+    </div>
+
+    <!-- Standard Package -->
+    <div class="border rounded-2xl p-6 text-center bg-orange-600 text-white shadow-lg scale-105">
+      <h3 class="text-2xl font-bold mb-2">₦50,000 <span class="text-sm text-orange-200">/year</span></h3>
+      <p class="font-semibold text-lg mb-2">Standard Package</p>
+      <p class="text-orange-100 mb-4 text-sm">For professionals who want to actively engage in training and advocacy.</p>
+      <ul class="text-left text-sm space-y-2 mb-6">
+        <li class="flex items-center"><i data-lucide="check-circle" class="w-4 h-4 text-white mr-2"></i>All Basic benefits</li>
+        <li class="flex items-center"><i data-lucide="check-circle" class="w-4 h-4 text-white mr-2"></i>Discounted access to workshops & training</li>
+        <li class="flex items-center"><i data-lucide="check-circle" class="w-4 h-4 text-white mr-2"></i>Participation in GGAI projects & initiatives</li>
+        <li class="flex items-center"><i data-lucide="check-circle" class="w-4 h-4 text-white mr-2"></i>Certificate of membership</li>
+      </ul>
+      <button onclick="openModal('Standard')" class="bg-white text-orange-600 px-6 py-2 rounded-full hover:bg-orange-50 transition">Get Standard</button>
+    </div>
+
+    <!-- Premium Package -->
+    <div class="border rounded-2xl p-6 text-center hover:shadow-xl transition">
+      <h3 class="text-2xl font-bold text-gray-800 mb-2">₦100,000 <span class="text-sm text-gray-500">/year</span></h3>
+      <p class="font-semibold text-lg mb-2">Premium Package</p>
+      <p class="text-gray-500 mb-4 text-sm">For organizations or individuals who want to collaborate at a higher level.</p>
+      <ul class="text-left text-sm text-gray-700 space-y-2 mb-6">
+        <li class="flex items-center"><i data-lucide="check-circle" class="w-4 h-4 text-orange-600 mr-2"></i>All Professional benefits</li>
+        <li class="flex items-center"><i data-lucide="check-circle" class="w-4 h-4 text-orange-600 mr-2"></i>Featured profile on GGAI’s website & social media</li>
+        <li class="flex items-center"><i data-lucide="check-circle" class="w-4 h-4 text-orange-600 mr-2"></i>Priority access to consultancy & partnerships</li>
+        <li class="flex items-center"><i data-lucide="check-circle" class="w-4 h-4 text-orange-600 mr-2"></i>Direct involvement in policy advocacy initiatives</li>
+      </ul>
+      <button onclick="openModal('Premium')" class="bg-orange-600 text-white px-6 py-2 rounded-full hover:bg-orange-700 transition">Get Premium</button>
+    </div>
+  </section>
+
+  <!-- MODAL FORM -->
+  <div id="memberModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+    <div class="bg-white rounded-2xl shadow-xl max-w-md w-full p-6 relative">
+      <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-500 hover:text-gray-800">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+      <h3 class="text-xl font-semibold mb-4">Join GGAI Membership</h3>
+      <form id="membershipForm" class="space-y-3">
+        <input id="planType" type="text" readonly class="w-full p-2 border rounded bg-gray-100 text-gray-700" />
+        <input type="text" placeholder="Full Name" class="w-full p-2 border rounded" required />
+        <input type="email" placeholder="Email Address" class="w-full p-2 border rounded" required />
+        <input type="tel" placeholder="Phone Number" class="w-full p-2 border rounded" required />
+        <textarea placeholder="Message (optional)" class="w-full p-2 border rounded"></textarea>
+        <button type="submit" class="w-full bg-orange-600 text-white py-2 rounded hover:bg-orange-700 transition">Submit</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    lucide.createIcons();
+
+    function goBack() {
+      if (document.referrer !== "") {
+        window.history.back();
+      } else {
+        window.location.href = "index.html";
+      }
+    }
+
+    function openModal(plan) {
+      document.getElementById("memberModal").classList.remove("hidden");
+      document.getElementById("planType").value = plan + " Package";
+    }
+
+    function closeModal() {
+      document.getElementById("memberModal").classList.add("hidden");
+    }
+
+    document.getElementById("membershipForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+      alert("Thank you for joining GGAI! We will contact you shortly.");
+      closeModal();
+    });
+  </script>
+
+</body>
+</html>

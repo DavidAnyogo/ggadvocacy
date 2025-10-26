@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Good Governance Advocacy International</title>
+  <meta name="description" content="Good Governance Advocacy International — promoting good governance, peace & progress" />
+
+  <!-- Poppins font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CDN (quick prototype) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    :root{
+      --primary: #0D1B2A; /* dark navy */
+      --accent: #F15A29;  /* orange */
+      --light:  #F9FAFB;  /* light background */
+    }
+
+    html { font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; }
+
+    /* animation helper: initial state */
+    .fade-up { opacity: 0; transform: translateY(18px); transition: all .6s cubic-bezier(.2,.9,.2,1); }
+    .fade-up.show { opacity: 1; transform: none; }
+
+    /* thin underline accent used under cards */
+    .accent-underline {
+      height: 4px;
+      background: var(--accent);
+      width: 56px;
+      border-radius: 4px;
+    }
+
+    /* hero overlay for background image */
+    .hero-bg {
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    /* small subtle card shadow */
+    .card-shadow { box-shadow: 0 6px 18px rgba(13,27,42,0.06); }
+  </style>
+</head>
+<body class="antialiased text-[color:var(--primary)] bg-[color:var(--light)]">
+
+  <!-- NAV -->
+<header class="bg-white/90 backdrop-blur-sm sticky top-0 z-50 border-b">
+  <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+    <a href="index.html" class="flex items-center gap-3">
+      <img src="assets/ggai-logo.png" alt="GGAI" class="w-10 h-10">
+      <div class="hidden sm:block">
+        <div class="text-sm font-semibold">GOOD GOVERNANCE</div>
+        <div class="text-xs text-slate-500">ADVOCACY INT'L</div>
+      </div>
+    </a>
+
+    <!-- desktop nav -->
+    <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
+      <a href="index.html" class="text-[color:var(--primary)] border-b-2 border-[color:var(--accent)] pb-2">Home</a>
+      <a href="about.html" class="text-slate-600 hover:text-[color:var(--primary)]">About Us</a>
+      <a href="events.html" class="text-slate-600 hover:text-[color:var(--primary)]">Events & Programs</a>
+      <a href="news.html" class="text-slate-600 hover:text-[color:var(--primary)]">News & Updates</a>
+      <a href="contact.html" class="text-slate-600 hover:text-[color:var(--primary)]">Contact</a>
+
+      <!-- social icons -->
+      <div class="flex items-center gap-4 text-slate-600 ml-4">
+        <a href="https://instagram.com/ggadvocacyintl" target="_blank" aria-label="Instagram" class="hover:text-[color:var(--accent)]">
+          <i data-lucide="instagram" class="w-5 h-5"></i>
+        </a>
+        <a href="https://twitter.com/ggadvocacyintl" target="_blank" aria-label="Twitter" class="hover:text-[color:var(--accent)]">
+          <i data-lucide="twitter" class="w-5 h-5"></i>
+        </a>
+        <a href="https://youtube.com/@ggaintl" target=" aria-label="YouTube" class="hover:text-[color:var(--accent)]">
+          <i data-lucide="youtube" class="w-5 h-5"></i>
+        </a>
+      </div>
+    </nav>
+
+    <!-- mobile menu btn -->
+    <div class="md:hidden flex items-center gap-3">
+      <a href="https://instagram.com/ggadvocacyintl" target="_blank" aria-label="Instagram" class="hover:text-[color:var(--accent)]">
+        <i data-lucide="instagram" class="w-5 h-5"></i>
+      </a>
+      <a href="https://twitter.com/ggadvocacyintl" target="_blank" aria-label="Twitter" class="hover:text-[color:var(--accent)]">
+        <i data-lucide="twitter" class="w-5 h-5"></i>
+      </a>
+      <a href="https://youtube.com/@ggaintl" target="_blank" aria-label="YouTube" class="hover:text-[color:var(--accent)]">
+        <i data-lucide="youtube" class="w-5 h-5"></i>
+      </a>
+      <button id="mobileBtn" aria-label="menu" class="text-xl">☰</button>
+    </div>
+  </div>
+
+  <!-- mobile nav -->
+  <div id="mobileNav" class="md:hidden hidden bg-white border-t">
+    <div class="px-6 py-4 flex flex-col gap-3">
+      <a href="index.html" class="py-2">Home</a>
+      <a href="about.html" class="py-2">About Us</a>
+      <a href="events.html" class="py-2">Events & Programs</a>
+      <a href="news.html" class="py-2">News & Updates</a>
+      <a href="contact.html" class="py-2">Contact</a>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="relative hero-bg" style="background-image:url('assets/ggai-building.jpeg');">
+  <!-- updated translucent overlay -->
+  <div class="bg-[#c3d4f0]/70">
+    <div class="px-6 py-20 md:py-28 lg:py-36 max-w-6xl mx-auto">
+      <div class="grid md:grid-cols-2 gap-8 items-center">
+        <div class="text-[color:var(--primary)]">
+          <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight mb-4 fade-up">
+            Building a Culture of Good Governance, Accountability, & Community Development
+          </h1>
+          <p class="text-sm sm:text-base text-[color:var(--primary)]/80 max-w-xl mb-6 fade-up">
+            We work to teach citizens, support good governance, and work with public agencies to improve and promote clear and effective governance.
+          </p>
+
+          <div class="flex gap-4 items-center fade-up">
+            <a href="member.html" class="inline-block bg-[color:var(--accent)] text-white px-5 py-3 rounded-md font-semibold shadow">Become a Member</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- lucide icons script -->
+<script src="https://unpkg.com/lucide@latest"></script>
+<script>lucide.createIcons();</script>
+
+    <!-- Mission / Vision / Core Values -->
+    <section class="py-12 md:py-16 px-6">
+      <div class="grid md:grid-cols-3 gap-6">
+        <article class="bg-white p-6 rounded-lg card-shadow fade-up">
+          <div class="flex items-center gap-4">
+            <div class="h-12 w-12 rounded-full bg-[color:var(--accent)]/10 flex items-center justify-center text-[color:var(--accent)]">
+              <!-- icon placeholder -->
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3"/></svg>
+            </div>
+            <h4 class="font-semibold">Our Vision</h4>
+          </div>
+          <div class="mt-4 text-sm text-slate-600">To be a top global advocate for good governance, policies that focus on people to encourage peace, progress and sustainable development.</div>
+          <div class="mt-4 accent-underline"></div>
+        </article>
+
+        <article class="bg-white p-6 rounded-lg card-shadow fade-up">
+          <div class="flex items-center gap-4">
+            <div class="h-12 w-12 rounded-full bg-[color:var(--accent)]/10 flex items-center justify-center text-[color:var(--accent)]">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4"/></svg>
+            </div>
+            <h4 class="font-semibold">Our Mission</h4>
+          </div>
+          <div class="mt-4 text-sm text-slate-600">To promote good governance, peace and progress, we provide training, and advocacy that empower people for sustainable development.</div>
+          <div class="mt-4 accent-underline"></div>
+        </article>
+
+        <article class="bg-white p-6 rounded-lg card-shadow fade-up">
+          <div class="flex items-center gap-4">
+            <div class="h-12 w-12 rounded-full bg-[color:var(--accent)]/10 flex items-center justify-center text-[color:var(--accent)]">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m-4 4h10"/></svg>
+            </div>
+            <h4 class="font-semibold">Core Values</h4>
+          </div>
+          <div class="mt-4 text-sm text-slate-600">To maintain integrity & transparency, we promote excellence and collaboration. This supports community growth and policy change.</div>
+          <div class="mt-4 accent-underline"></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Large image / content block -->
+    <section class="py-8 px-6">
+      <div class="rounded-lg overflow-hidden mb-6">
+        <img src="assets/7.jpeg" alt="meeting" class="w-full h-64 object-cover">
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8 items-center">
+        <div>
+          <h3 class="text-2xl font-bold fade-up">What GGAI Does</h3>
+          <p class="mt-4 text-slate-600 fade-up">Good Governance Advocacy International (GGAI) is committed to creating a world where leadership serves the people. We raise awareness through education and advocacy, offer training that prepares individuals and institutions, and collaborate with governments and communities to promote accountability and transparency.</p>
+        </div>
+        <div class="flex justify-center md:justify-end fade-up">
+          <img src="assets/ggai-logo.png" alt="GGAI logo" class="w-56 h-56 object-contain">
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works (4 steps) -->
+    <section class="py-12 px-6">
+      <h3 class="text-center text-2xl font-semibold mb-8 fade-up">How It Works</h3>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="bg-white p-6 rounded-lg card-shadow fade-up">
+          <div class="text-[color:var(--accent)] mb-3">1</div>
+          <p class="font-semibold">Choose a Plan</p>
+          <p class="mt-2 text-sm text-slate-600">Pick the membership subscription that works for you.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg card-shadow fade-up">
+          <div class="text-[color:var(--accent)] mb-3">2</div>
+          <p class="font-semibold">Sign Up</p>
+          <p class="mt-2 text-sm text-slate-600">Fill out a quick membership form and send us your information.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg card-shadow fade-up">
+          <div class="text-[color:var(--accent)] mb-3">3</div>
+          <p class="font-semibold">Get Approved</p>
+          <p class="mt-2 text-sm text-slate-600">Our team reviews your application and confirms your membership.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg card-shadow fade-up">
+          <div class="text-[color:var(--accent)] mb-3">4</div>
+          <p class="font-semibold">Get Involved</p>
+          <p class="mt-2 text-sm text-slate-600">Access special training sessions and opportunities to make an impact in the community.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services / Explore -->
+    <section class="py-12 px-6">
+      <h3 class="text-center text-2xl font-semibold mb-8 fade-up">Explore Our Services</h3>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-white rounded-lg card-shadow overflow-hidden fade-up">
+          <img src="assets/nuj2.jpg" alt="" class="w-full h-40 object-cover">
+          <div class="p-4">
+            <h5 class="font-semibold">Training & Capacity Building</h5>
+            <p class="mt-2 text-sm text-slate-600">Workshops, mentorship and trainings for leaders and communities.</p>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-lg card-shadow overflow-hidden fade-up">
+          <img src="assets/3.jpeg" alt="" class="w-full h-40 object-cover">
+          <div class="p-4">
+            <h5 class="font-semibold">Media Advocacy</h5>
+            <p class="mt-2 text-sm text-slate-600">Campaigns and media programs to raise awareness.</p>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-lg card-shadow overflow-hidden fade-up">
+          <img src="assets/zipline2.jpg" alt="" class="w-full h-40 object-cover">
+          <div class="p-4">
+            <h5 class="font-semibold">Consultancy Services</h5>
+            <p class="mt-2 text-sm text-slate-600">Policy advisory and technical assistance to governments and NGOs.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-12 px-6 bg-white rounded-lg mx-6 mb-12 card-shadow">
+      <div class="grid md:grid-cols-2 gap-6 items-center">
+        <div>
+          <h3 class="text-2xl font-bold fade-up">Ready to Make an Impact?</h3>
+          <p class="mt-4 text-slate-600 fade-up">Change starts with action. When you become a GGAI member, you join a network of people dedicated to promoting accountability and sustainable development.</p>
+          <a href="member.html" class="inline-block mt-6 bg-[color:var(--accent)] text-white px-5 py-3 rounded-md font-semibold fade-up">Become a Member</a>
+        </div>
+        <div class="flex justify-center md:justify-end fade-up">
+          <img src="assets/hands.jpg" alt="hands" class="w-64 h-40 object-cover rounded-md">
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-[color:var(--primary)] text-white mt-8">
+    <div class="max-w-6xl mx-auto px-6 py-12 grid md:grid-cols-3 gap-6">
+      <div>
+        <div class="flex items-center gap-3">
+          <img src="assets/ggai-logo.png" alt="GGAI" class="w-10 h-10">
+          <div>
+            <div class="font-semibold">GOOD GOVERNANCE ADVOCACY INT'L</div>
+            <div class="text-sm text-slate-200/80">Promoting good governance & progress</div>
+          </div>
+        </div>
+        <p class="mt-4 text-sm text-slate-200/70">Boulevard road 2, Parliamentary Extension, Calabar, Nigeria<br/>Email: ggadvocacyintl@gmail.com</p>
+      </div>
+
+      <div>
+        <h6 class="font-semibold">Quick Links</h6>
+        <ul class="mt-3 space-y-2 text-sm text-slate-200/70">
+          <li><a href="news.html">News</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="events.html">Events & Programs</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div>
+        <h6 class="font-semibold">Follow Us</h6>
+        <div class="mt-3 flex gap-3">
+          <a href="https://instagram.com/ggadvocacyintl" target="_blank" class="bg-white/10 p-2 rounded-full"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+          <a href="https://twitter.com/ggadvocacyintl" target="_blank" class="bg-white/10 p-2 rounded-full"><i data-lucide="twitter" class="w-5 h-5"></i></a>
+          <a href="https://youtube.com/@ggaintl" target="_blank" class="bg-white/10 p-2 rounded-full"><i data-lucide="youtube" class="w-5 h-5"></i></a>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <div class="border-t border-white/10">
+      <div class="max-w-6xl mx-auto px-6 py-4 text-xs text-slate-200/60">© <span id="year"></span> GGAI. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    // set year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // mobile nav toggle
+    document.getElementById('mobileBtn')?.addEventListener('click', ()=> {
+      document.getElementById('mobileNav')?.classList.toggle('hidden');
+    });
+
+    // IntersectionObserver to add .show for .fade-up elements
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          entry.target.classList.add('show');
+          io.unobserve(entry.target);
+        }
+      });
+    }, {threshold: 0.12});
+
+    document.querySelectorAll('.fade-up').forEach(el => io.observe(el));
+  </script>
+</body>
+</html>
