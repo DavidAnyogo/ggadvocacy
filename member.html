@@ -68,50 +68,14 @@
     </div>
   </section>
 
-  <!-- MODAL FORM -->
-  <div id="memberModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-    <div class="bg-white rounded-2xl shadow-xl max-w-md w-full p-6 relative">
-      <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-500 hover:text-gray-800">
-        <i data-lucide="x" class="w-5 h-5"></i>
-      </button>
-      <h3 class="text-xl font-semibold mb-4">Join GGAI Membership</h3>
-      <form id="membershipForm" class="space-y-3">
-        <input id="planType" type="text" readonly class="w-full p-2 border rounded bg-gray-100 text-gray-700" />
-        <input type="text" placeholder="Full Name" class="w-full p-2 border rounded" required />
-        <input type="email" placeholder="Email Address" class="w-full p-2 border rounded" required />
-        <input type="tel" placeholder="Phone Number" class="w-full p-2 border rounded" required />
-        <textarea placeholder="Message (optional)" class="w-full p-2 border rounded"></textarea>
-        <button type="submit" class="w-full bg-orange-600 text-white py-2 rounded hover:bg-orange-700 transition">Submit</button>
-      </form>
-    </div>
-  </div>
+  <!-- PAYMENT OPTION (OPTION A) -->
+  <section class="max-w-3xl mx-auto px-6 pb-20 text-center">
+    <h3 class="text-2xl font-bold mb-4">Bank Transfer</h3>
+    <p class="text-gray-600 mb-6">Please make your payment to either of the accounts below of your preferred choicee and send your receipt to our email ggadvocacyintl@gmail.com for confirmation.</p>
 
-  <script>
-    lucide.createIcons();
-
-    function goBack() {
-      if (document.referrer !== "") {
-        window.history.back();
-      } else {
-        window.location.href = "index.html";
-      }
-    }
-
-    function openModal(plan) {
-      document.getElementById("memberModal").classList.remove("hidden");
-      document.getElementById("planType").value = plan + " Package";
-    }
-
-    function closeModal() {
-      document.getElementById("memberModal").classList.add("hidden");
-    }
-
-    document.getElementById("membershipForm").addEventListener("submit", function (e) {
-      e.preventDefault();
-      alert("Thank you for joining GGAI! We will contact you shortly.");
-      closeModal();
-    });
-  </script>
+      <div class="fade-up">
+        <img src="assets/ggaiaccount.jpeg" alt="Sir Leonard Anyogo" class="w-full max-w-md h-auto object-cover rounded-lg card-shadow">
+      </div>
 
 </body>
 </html>
