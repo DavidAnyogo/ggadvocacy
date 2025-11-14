@@ -49,6 +49,7 @@
           <a href="https://instagram.com/ggadvocacyintl" target="_blank" class="hover:text-[#F15A29]" aria-label="Instagram"><i data-lucide="instagram" class="w-5 h-5"></i></a>
           <a href="https://twitter.com/ggadvocacyintl" target="_blank" class="hover:text-[#F15A29]" aria-label="Twitter"><i data-lucide="twitter" class="w-5 h-5"></i></a>
           <a href="https://youtube.com/@ggaintl" target="_blank" class="hover:text-[#F15A29]" aria-label="YouTube"><i data-lucide="youtube" class="w-5 h-5"></i></a>
+          <a href="https://facebook.com/GgovernanceAdvocacyintlGgai(Ggai)" target="_blank" class="bg-white/10 p-2 rounded-full"><i data-lucide="facebook" class="w-5 h-5"></i></a>
         </div>
       </nav>
 
@@ -56,6 +57,7 @@
         <a href="https://instagram.com/ggadvocacyintl" target="_blank" class="hover:text-[#F15A29]"><i data-lucide="instagram" class="w-5 h-5"></i></a>
         <a href="https://twitter.com/ggadvocacyintl" target="_blank" class="hover:text-[#F15A29]"><i data-lucide="twitter" class="w-5 h-5"></i></a>
         <a href="https://youtube.com/@ggaintl" target="_blank" class="hover:text-[#F15A29]"><i data-lucide="youtube" class="w-5 h-5"></i></a>
+        <a href="https://facebook.com/GgovernanceAdvocacyintlGgai(Ggai)" target="_blank" class="bg-white/10 p-2 rounded-full"><i data-lucide="facebook" class="w-5 h-5"></i></a>
         <button id="mobileBtn" aria-label="menu" class="text-xl">☰</button>
       </div>
     </div>
@@ -134,6 +136,7 @@
           <a href="https://instagram.com/ggadvocacyintl" target="_blank" class="bg-white/10 p-2 rounded-full"><i data-lucide="instagram" class="w-5 h-5"></i></a>
           <a href="https://twitter.com/ggadvocacyintl" target="_blank" class="bg-white/10 p-2 rounded-full"><i data-lucide="twitter" class="w-5 h-5"></i></a>
           <a href="https://youtube.com/@ggaintl" target="_blank" class="bg-white/10 p-2 rounded-full"><i data-lucide="youtube" class="w-5 h-5"></i></a>
+          <a href="https://facebook.com/GgovernanceAdvocacyintlGgai(Ggai)" target="_blank" class="bg-white/10 p-2 rounded-full"><i data-lucide="facebook" class="w-5 h-5"></i></a>
         </div>
       </div>
     </div>
@@ -149,24 +152,45 @@
     lucide.createIcons();
     document.getElementById("year").textContent = new Date().getFullYear();
 
-    // sample events
-    const events = [
-      { title: "Public Lecture: Strengthening Governance & Accountability", date: "Today Wed, Nov 5 2025 • 3:30pm", image: "assets/ggai-publec-flyer.jpg" },
-      { title: "Community Development Workshop", date: "Coming Soon", image: "assets/nuj2.jpg" },
-      { title: "Media & Policy Engagement", date: "Coming Soon", image: "assets/20.jpeg" },
-    ];
+    // Events with manual links
+const events = [
+  { 
+    title: "Public Lecture: Strengthening Governance & Accountability",
+    date: "Wed, Nov 5 2025",
+    image: "assets/ggai-publec-flyer.jpg",
+    link: "publec.html"
+  },
+  { 
+    title: "Community Development Workshop",
+    date: "Coming Soon",
+    image: "assets/nuj2.jpg",
+    link: "event-community-workshop.html"  // <-- your page siuu
+  },
+  { 
+    title: "Media & Policy Engagement",
+    date: "Coming Soon",
+    image: "assets/20.jpeg",
+    link: "event-media-policy.html"  // <-- your page
+  },
+];
 
-    const grid = document.getElementById("eventsGrid");
-    grid.innerHTML = events.map(ev => `
-      <article class="bg-white rounded-lg overflow-hidden card-shadow fade-up hover:scale-[1.02] transition">
-        <img src="${ev.image}" alt="${ev.title}" class="w-full h-48 object-cover">
-        <div class="p-4">
-          <h4 class="font-semibold">${ev.title}</h4>
-          <p class="mt-2 text-sm text-slate-500">${ev.date}</p>
-          <a href="#" class="inline-block mt-4 text-[color:var(--accent)] text-sm font-medium hover:underline">Read More →</a>
-        </div>
-      </article>
-    `).join("");
+const grid = document.getElementById("eventsGrid");
+
+grid.innerHTML = events.map(ev => `
+  <article class="bg-white rounded-lg overflow-hidden card-shadow fade-up hover:scale-[1.02] transition">
+    <img src="${ev.image}" alt="${ev.title}" class="w-full h-48 object-cover">
+    <div class="p-4">
+      <h4 class="font-semibold">${ev.title}</h4>
+      <p class="mt-2 text-sm text-slate-500">${ev.date}</p>
+
+      <a href="${ev.link}" 
+         class="inline-block mt-4 text-[color:var(--accent)] text-sm font-medium hover:underline">
+         Read More →
+      </a>
+    </div>
+  </article>
+`).join("");
+
 
     // fade animation
     const io = new IntersectionObserver((entries) => {
@@ -194,6 +218,3 @@
   </script>
 </body>
 </html>
-
-
-
